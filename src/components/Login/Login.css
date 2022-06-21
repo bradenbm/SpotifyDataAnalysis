@@ -1,0 +1,19 @@
+.Login {
+	margin: 100px;
+	text-align: center;
+}
+
+.button {
+	background-color: #1DB954; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	font-size: 18px;
+	transition-duration: 0.4s;
+	border-radius: 15px;
+	width: 175px;
+  }
+
+.button:hover {
+	background-color: #127c37;
+}
