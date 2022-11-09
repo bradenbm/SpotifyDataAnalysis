@@ -8,7 +8,7 @@ const ButtonGetTop = props => {
     const [token, setToken] = useState('');
     const [data, setData] = useState({});
 
-    const [temp, setTemp] = useState('');
+    // const [temp, setTemp] = useState('');
 
 
     // let temp = '';
@@ -49,9 +49,9 @@ const ButtonGetTop = props => {
                 console.log(i++ + ": " + track.name);
             }
 
-            setTemp({
-                temp: 'lasx'
-            });
+            // setTemp({
+            //     temp: 'lasx'
+            // });
 
             
 

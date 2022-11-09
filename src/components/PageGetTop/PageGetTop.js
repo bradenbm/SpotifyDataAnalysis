@@ -81,7 +81,7 @@ const PageGetTop = () => {
     
     //Page HTML
     return(
-        <div className="DataPage">
+        <div className="PageGetTop">
             <h1>Find your top songs and artists!</h1>
 
             <div className="row">
