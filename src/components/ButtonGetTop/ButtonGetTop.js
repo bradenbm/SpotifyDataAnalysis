@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 
-import './SpotifyGetData.css';
+import './ButtonGetTop.css';
 
-const SpotifyGetData = props => {
+const ButtonGetTop = props => {
+    let index = 1;
     const [token, setToken] = useState('');
     const [data, setData] = useState({});
 
@@ -62,17 +63,16 @@ const SpotifyGetData = props => {
         });
     };
 
-
     return (
         <div>
             <button onClick={handleGetData}>Get Data</button>
             <br/>
             {/* <p>{temp}</p> */}
             {
-                data?.items ? data.items.map((item) => <p className="list">{item.name} </p>) : null
+                data?.items ? data.items.map((item) => <p className="list">{index++}: {item.name} </p>) : null
             }
         </div>
     );
 };
 
-export default SpotifyGetData;
+export default ButtonGetTop;

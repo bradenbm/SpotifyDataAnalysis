@@ -1,5 +1,5 @@
 import React from "react";
-import './Login.css';
+import './PageLogin.css';
 
 const CLIENT_ID = "a7985e3081a84e6b8352e8d877e8c375"; // insert your client id here from spotify
 const SPOTIFY_AUTHORIZE_ENDPOINT = "https://accounts.spotify.com/authorize";
@@ -15,7 +15,7 @@ const SCOPES_URL_PARAM = SCOPES.join(SPACE_DELIMITER);
 
 
 
-const Login = () => {
+const PageLogin = () => {
 
     const handleLogin = () => {
         window.location = `${SPOTIFY_AUTHORIZE_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URL_AFTER_LOGIN}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=true`;
@@ -30,4 +30,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default PageLogin;

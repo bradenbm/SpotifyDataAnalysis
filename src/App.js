@@ -7,8 +7,8 @@ import {
 
 import './App.css';
 // import NavigationBar from './components/NavigationBar';
-import Login from './components/Login';
-import DataPage from './components/DataPage';
+import PageLogin from './components/PageLogin';
+import PageGetTop from './components/PageGetTop';
 
 
 function App() {
@@ -17,8 +17,8 @@ function App() {
 			{/* <NavigationBar/> */}
 
 			<Routes>
-				<Route path='/profile' element={<DataPage/>} />
-				<Route path='/' element={<Login/>} />
+				<Route path='/profile' element={<PageGetTop/>} />
+				<Route path='/' element={<PageLogin/>} />
 			</Routes>
 		</Router>
 		

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import './DataPage.css';
-import SpotifyGetData from "../SpotifyGetData/SpotifyGetData";
+import './PageGetTop.css';
+import ButtonGetTop from "../ButtonGetTop/ButtonGetTop";
 import Dropdown from "../Dropdown";
 
 const TYPES = [
@@ -34,7 +34,7 @@ const getReturnedParams = (hash) => {
 };
 
 
-const DataPage = () => {
+const PageGetTop = () => {
     const [type, setType] = useState({selectedType: TYPES[0].value});
     const [limit, setLimit] = useState({selectedLimit: NUMS[9].value});
     const [time, setTime] = useState({selectedTime: TIMES[0].value});
@@ -57,44 +57,29 @@ const DataPage = () => {
             localStorage.setItem('tokenType', token_type);
         }
 
-        setType({
-            selectedType: type.selectedType
-        });
-        setLimit({
-            selectedLimit: limit.selectedLimit
-        });
-        setTime({
-            selectedTime: time.selectedTime
-        });
-        setOffset({
-            selectedOffset: offset.selectedOffset
-        });
-    }, [type.selectedType, limit.selectedLimit, time.selectedTime, offset.selectedOffset]);
+        setType({selectedType: type.selectedType});
+        setLimit({selectedLimit: limit.selectedLimit});
+        setTime({selectedTime: time.selectedTime});
+        setOffset({selectedOffset: offset.selectedOffset});
+
+    }
+        , [type.selectedType, limit.selectedLimit, time.selectedTime, offset.selectedOffset]);
 
     const typeChanged = (val) => {
-        setType({
-            selectedType: val
-        });
+        setType({selectedType: val});
     };
     const limitChanged = (val) => {
-        setLimit({
-            selectedLimit: val
-        });
+        setLimit({selectedLimit: val});
     };
     const timeChanged = (val) => {
-        setTime({
-            selectedTime: val
-        });
+        setTime({selectedTime: val});
     };
     const offsetChanged = (val) => {
-        setOffset({
-            selectedOffset: val
-        });
+        setOffset({selectedOffset: val});
     };
 
     
-
-    
+    //Page HTML
     return(
         <div className="DataPage">
             <h1>Find your top songs and artists!</h1>
@@ -107,9 +92,9 @@ const DataPage = () => {
             </div>
 
             {/* onMouseDown="if(this.options.length>8){this.size=8;}" onChange='this.size=0;' onBlur="this.size=0;" */}
-            <SpotifyGetData type={type.selectedType} limit={limit.selectedLimit} time={time.selectedTime} offset={offset.selectedOffset}/>
+            <ButtonGetTop type={type.selectedType} limit={limit.selectedLimit} time={time.selectedTime} offset={offset.selectedOffset}/>
         </div>
     );
 };
 
-export default DataPage;
+export default PageGetTop;
